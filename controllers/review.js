@@ -3,7 +3,7 @@ const asyncHandler = require("express-async-handler");
 
 // Create a new review
 exports.createreview = asyncHandler(async (req, res) => {
-  const { chat, userId, shopId } = req.body.data;
+  const { chat, userId, shopId } = req.body;
   
 
   if ( !chat || !userId || !shopId) {

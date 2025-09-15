@@ -5,7 +5,7 @@ const shopModel = require("../models/shop");
 
 //create booking
 exports.create = asyncHandler(async (req, res) => {
-  const { userId,  shopId, checkInDate , time } = req.body.data;
+  const { userId,  shopId, checkInDate , time } = req.body;
 
   if (!userId || !time || !checkInDate || !shopId) {
     return res.status(400).json({ message: "Please add all fields" });

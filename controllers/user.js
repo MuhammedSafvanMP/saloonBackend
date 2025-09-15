@@ -15,7 +15,7 @@ const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TO
 
 //create user
 exports.create = asyncHandler(async (req, res) => {
-  const { name, email, password,  phone } = req.body.data;
+  const { name, email, password,  phone } = req.body;
 
   if (!name || !email || !password ||!phone) {
     return res.status(400).json({ message: "Please add all fields" });
