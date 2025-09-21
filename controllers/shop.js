@@ -36,7 +36,7 @@ exports.create = asyncHandler(async (req, res) => {
   }
 
   const images = req.cloudinaryImageUrl;
-    const image = req.cloudinaryImageUrl;
+    const image = req.cloudinaryImageUrl[0];
 
     if (!image) {
     return res.status(400).json({ message: "No banner uploaded" });
