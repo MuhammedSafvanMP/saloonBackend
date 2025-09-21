@@ -34,6 +34,8 @@ const shopSchema = new mongoose.Schema(
     ],
     userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
     isAvailable: { type: Boolean, default: true },
+    openTime: {type: String},
+    closeTime: {type: String},
     rating: {
       average: { type: Number, default: 0 },
       count: { type: Number, default: 0 },

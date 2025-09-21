@@ -14,9 +14,11 @@ exports.create = asyncHandler(async (req, res) => {
     gst,
     category,
      services,
-     userId
-   
+     userId,
+        openTime,
+          closeTime
   } = req.body;
+
 
   if (
     !name ||
@@ -25,7 +27,9 @@ exports.create = asyncHandler(async (req, res) => {
     !services ||
     !email  ||
     !location ||
-    !userId
+    !userId ||
+     !openTime ||
+     !closeTime
     
   ) {
     return res.status(400).json({ message: "Please add all fields" });
@@ -49,7 +53,9 @@ exports.create = asyncHandler(async (req, res) => {
     banner: image,
     services,
     category,
-    userId
+    userId,
+     openTime,
+          closeTime
   });
 
   if (!shop) {
@@ -125,7 +131,9 @@ exports.update = asyncHandler(async (req, res) => {
     category,
      services,
       newBanner,
-      existingPhotos
+      existingPhotos,
+       openTime,
+          closeTime
  
   } = req.body;
 
@@ -154,6 +162,8 @@ exports.update = asyncHandler(async (req, res) => {
   if (phone) shop.phone = phone;
   if (description) shop.description = description;
   if (category) shop.category = category;
+  if( openTime) shop.openTime = openTime;
+  if(closeTime) shop.closeTime = closeTime;
   if(newBanner) shop.banner = newBanner;
     if (image) shop.banner = image;
 

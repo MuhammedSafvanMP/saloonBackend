@@ -29,15 +29,15 @@ exports.getreviews = asyncHandler(async (req, res) => {
   res.status(200).json(reviews);
 });
 
-// get spcific document id
-exports.geRoomReview = asyncHandler(async (req, res) => {
-    const { id } = req.params;
+// // get spcific document id
+// exports.geRoomReview = asyncHandler(async (req, res) => {
+//     const { id } = req.params;
   
-    const discussions = await Review.find({ shopId: id})
-      .populate("userId", "name image")
-      .populate("shopId");
-    res.status(200).json(discussions);
-  });
+//     const discussions = await Review.find({ shopId: id})
+//       .populate("userId", "name image")
+//       .populate("shopId");
+//     res.status(200).json(discussions);
+//   });
 
 
 // Get single review by ID
