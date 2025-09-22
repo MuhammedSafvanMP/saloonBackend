@@ -35,12 +35,12 @@ exports.create = asyncHandler(async (req, res) => {
     return res.status(400).json({ message: "Please add all fields" });
   }
 
-  const images = req.cloudinaryImageUrl;
-    const image = req.cloudinaryImageUrl[0];
+  // const images = req.cloudinaryImageUrl;
+  //   const image = req.cloudinaryImageUrl[0];
 
-    if (!image) {
-    return res.status(400).json({ message: "No banner uploaded" });
-  }
+  //   if (!image) {
+  //   return res.status(400).json({ message: "No banner uploaded" });
+  // }
 
   const shop = await shopModel.create({
     name,
@@ -49,8 +49,8 @@ exports.create = asyncHandler(async (req, res) => {
     description,
     email,
     gst,
-    photos: images,
-    banner: image,
+    // photos: images,
+    // banner: image,
     services,
     category,
     userId,

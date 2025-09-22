@@ -20,8 +20,8 @@ const shopSchema = new mongoose.Schema(
     },
       description: {type: String},
     gst: { type: String },
-    photos: [String],
-    banner: {type: String},
+    // photos: [String],
+    // banner: {type: String},
     category: {
       type: String,
     },

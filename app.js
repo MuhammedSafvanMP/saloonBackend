@@ -11,6 +11,7 @@ var shopRouter = require("./routes/shop");
 var reviewRouter = require("./routes/review");
 var bookingRouter = require("./routes/booking");
 var notficationRouter = require("./routes/notfication");
+var adRouter = require("./routes/ads");
 
 
 
@@ -50,6 +51,8 @@ app.use('/shops', shopRouter);
 app.use('/reviews', reviewRouter);
 app.use('/bookings', bookingRouter);
 app.use('/notifications', notficationRouter);
+app.use('/ads', adRouter);
+
 
 
 
